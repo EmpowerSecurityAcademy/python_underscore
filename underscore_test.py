@@ -7,8 +7,8 @@ class TestUnderscore(unittest.TestCase):
 		def multiply_2(num):
 			return num * 2
 
-		input_array = [3, 4, 5, 6, 7]
-		res = p_map(input_array, multiply_2)
+		input_list = [3, 4, 5, 6, 7]
+		res = p_map(input_list, multiply_2)
 
 		self.assertEqual(res, [6, 8, 10, 12, 14])
 
@@ -18,8 +18,8 @@ class TestUnderscore(unittest.TestCase):
 	    		return True 
 	    	return False
 
-	    input_array = ["artichoke", "orangatang", "kiwi", "orange", "apple"]
-	    res = p_filter(input_array, start_with_a)
+	    input_list = ["artichoke", "orangatang", "kiwi", "orange"]
+	    res = p_filter(input_list, start_with_a)
 
 	    self.assertEqual(res, ["artichoke"])
 
@@ -29,8 +29,8 @@ class TestUnderscore(unittest.TestCase):
 	# 			return True
 	# 		return False
 
-	# 	input_array = [8, 5, 9, 11]
-	# 	res = p_any(input_array, greater_than_10)
+	# 	input_list = [8, 5, 9, 11]
+	# 	res = p_any(input_list, greater_than_10)
 	# 	self.assertEqual(res, True)
 
 	# def test_every(self):
@@ -39,13 +39,13 @@ class TestUnderscore(unittest.TestCase):
 	# 			return True
 	# 		return False
 
-	# 	input_array = [11, 15, 19, 21]
-	# 	res = p_any(input_array, greater_than_10)
+	# 	input_list = [11, 15, 19, 21]
+	# 	res = p_any(input_list, greater_than_10)
 	# 	self.assertEqual(res, True)
 
 	# def test_contains(self):
-	# 	input_array = [3, 4, 5, 6]
-	# 	res = p_contains(input_array, 6)
+	# 	input_list = [3, 4, 5, 6]
+	# 	res = p_contains(input_list, 6)
 	# 	self.assertEqual(res, True)
 
 	# def test_reduce(self):
@@ -53,8 +53,8 @@ class TestUnderscore(unittest.TestCase):
 	# 	def summer(num_1, num_2):
 	# 		return num_1 + num_2
 
-	# 	input_array = [8, 5, 9, 11]
-	# 	res = p_reduce(input_array, summer, 0)
+	# 	input_list = [8, 5, 9, 11]
+	# 	res = p_reduce(input_list, summer, 0)
 	# 	self.assertEqual(res, 33)
 
 
