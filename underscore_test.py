@@ -12,16 +12,16 @@ class TestUnderscore(unittest.TestCase):
 
 		self.assertEqual(res, [6, 8, 10, 12, 14])
 
-	# def test_filter(self):
-	#     def start_with_a(word):
-	#     	if word[0] == "a":
-	#     		return True 
-	#     	return False
+	def test_filter(self):
+	    def start_with_a(word):
+	    	if word[0] == "a":
+	    		return True 
+	    	return False
 
-	#     input_array = ["artichoke", "orangatang", "kiwi", "orange"]
-	#     res = p_filter(input_array, start_with_a)
+	    input_array = ["artichoke", "orangatang", "kiwi", "orange", "apple"]
+	    res = p_filter(input_array, start_with_a)
 
-	#     self.assertEqual(res, ["artichoke"])
+	    self.assertEqual(res, ["artichoke"])
 
 	# def test_any(self):
 	# 	def greater_than_10(number):
