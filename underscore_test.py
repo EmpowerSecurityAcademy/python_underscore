@@ -12,6 +12,14 @@ class TestUnderscore(unittest.TestCase):
 
 		self.assertEqual(res, [6, 8, 10, 12, 14])
 
+		def multiply_3(num):
+			return num * 3
+
+		input_list = [3, 4, 5, 6, 7]
+		res = p_map(multiply_2, input_list)
+
+		self.assertEqual(res, [9, 12, 15, 18, 21])
+
 	def test_filter(self):
 	    def start_with_a(word):
 	    	if word[0] == "a":
