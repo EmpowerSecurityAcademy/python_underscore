@@ -8,7 +8,7 @@ class TestUnderscore(unittest.TestCase):
 			return num * 2
 
 		input_list = [3, 4, 5, 6, 7]
-		res = p_map(input_list, multiply_2)
+		res = p_map(multiply_2, input_list)
 
 		self.assertEqual(res, [6, 8, 10, 12, 14])
 
@@ -23,15 +23,25 @@ class TestUnderscore(unittest.TestCase):
 
 	    self.assertEqual(res, ["artichoke"])
 
-	# def test_any(self):
-	# 	def greater_than_10(number):
-	# 		if number > 10:
-	# 			return True
-	# 		return False
+	    def contains_a(word):
+	    	if "a" in word:
+	    		return True
+	    	return False
 
-	# 	input_list = [8, 5, 9, 11]
-	# 	res = p_any(input_list, greater_than_10)
-	# 	self.assertEqual(res, True)
+	    input_list = ["artichoke", "orangatang", "kiwi", "orange"]
+	    res = p_filter(contains_a, input_list)
+
+	    self.assertEqual(res, ["artichoke", "orangatang", "orange"])
+
+	def test_any(self):
+		def greater_than_10(number):
+			if number > 10:
+				return True
+			return False
+
+		input_list = [8, 5, 9, 11]
+		res = p_any(input_list, greater_than_10)
+		self.assertEqual(res, True)
 
 	# def test_every(self):
 	# 	def greater_than_10(number):
