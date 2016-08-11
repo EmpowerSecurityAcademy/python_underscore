@@ -43,15 +43,23 @@ class TestUnderscore(unittest.TestCase):
 		res = p_any(input_list, greater_than_10)
 		self.assertEqual(res, True)
 
-	# def test_every(self):
-	# 	def greater_than_10(number):
-	# 		if number > 10:
-	# 			return True
-	# 		return False
+		input_list = [8, 5, 9, 3]
+		res = p_any(input_list, greater_than_10)
+		self.assertEqual(res, False)
 
-	# 	input_list = [11, 15, 19, 21]
-	# 	res = p_any(input_list, greater_than_10)
-	# 	self.assertEqual(res, True)
+	def test_every(self):
+		def greater_than_10(number):
+			if number > 10:
+				return True
+			return False
+
+		input_list = [11, 15, 19, 21]
+		res = p_any(input_list, greater_than_10)
+		self.assertEqual(res, True)
+
+		input_list = [11, 15, 19, 3]
+		res = p_any(input_list, greater_than_10)
+		self.assertEqual(res, False)
 
 	# def test_contains(self):
 	# 	input_list = [3, 4, 5, 6]
