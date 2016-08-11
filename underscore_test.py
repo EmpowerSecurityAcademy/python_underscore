@@ -16,7 +16,7 @@ class TestUnderscore(unittest.TestCase):
 			return num * 3
 
 		input_list = [3, 4, 5, 6, 7]
-		res = p_map(multiply_2, input_list)
+		res = p_map(multiply_3, input_list)
 
 		self.assertEqual(res, [9, 12, 15, 18, 21])
 
@@ -69,19 +69,32 @@ class TestUnderscore(unittest.TestCase):
 		res = p_any(input_list, greater_than_10)
 		self.assertEqual(res, False)
 
-	# def test_contains(self):
-	# 	input_list = [3, 4, 5, 6]
-	# 	res = p_contains(input_list, 6)
-	# 	self.assertEqual(res, True)
+	def test_contains(self):
+		input_list = [3, 4, 5, 6]
+		res = p_contains(input_list, 6)
+		self.assertEqual(res, True)
 
-	# def test_reduce(self):
+		input_list = [3, 4, 5, 6]
+		res = p_contains(input_list, 11)
+		self.assertEqual(res, False)
 
-	# 	def summer(num_1, num_2):
-	# 		return num_1 + num_2
 
-	# 	input_list = [8, 5, 9, 11]
-	# 	res = p_reduce(input_list, summer, 0)
-	# 	self.assertEqual(res, 33)
+	def test_reduce(self):
+
+		def summer(num_1, num_2):
+			return num_1 + num_2
+
+		input_list = [8, 5, 9, 11]
+		res = p_reduce(input_list, summer, 0)
+		self.assertEqual(res, 33)
+
+
+		def subtractor(num_1, num_2):
+			return num_1 - num_2
+
+		input_list = [8, 5, 9, 11]
+		res = p_reduce(input_list, subtractor, 111)
+		self.assertEqual(res, 33)
 
 
 
