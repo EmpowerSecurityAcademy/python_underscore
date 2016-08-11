@@ -27,7 +27,7 @@ class TestUnderscore(unittest.TestCase):
 	    	return False
 
 	    input_list = ["artichoke", "orangatang", "kiwi", "orange"]
-	    res = p_filter(input_list, start_with_a)
+	    res = p_filter(start_with_a, input_list)
 
 	    self.assertEqual(res, ["artichoke"])
 
@@ -48,11 +48,11 @@ class TestUnderscore(unittest.TestCase):
 			return False
 
 		input_list = [8, 5, 9, 11]
-		res = p_any(input_list, greater_than_10)
+		res = p_any(greater_than_10, input_list)
 		self.assertEqual(res, True)
 
 		input_list = [8, 5, 9, 3]
-		res = p_any(input_list, greater_than_10)
+		res = p_any(greater_than_10, input_list)
 		self.assertEqual(res, False)
 
 	def test_every(self):
@@ -62,11 +62,11 @@ class TestUnderscore(unittest.TestCase):
 			return False
 
 		input_list = [11, 15, 19, 21]
-		res = p_any(input_list, greater_than_10)
+		res = p_every(greater_than_10, input_list)
 		self.assertEqual(res, True)
 
 		input_list = [11, 15, 19, 3]
-		res = p_any(input_list, greater_than_10)
+		res = p_every(greater_than_10, input_list)
 		self.assertEqual(res, False)
 
 	def test_contains(self):
@@ -85,7 +85,7 @@ class TestUnderscore(unittest.TestCase):
 			return num_1 + num_2
 
 		input_list = [8, 5, 9, 11]
-		res = p_reduce(input_list, summer, 0)
+		res = p_reduce(summer, input_list, 0)
 		self.assertEqual(res, 33)
 
 
@@ -93,9 +93,8 @@ class TestUnderscore(unittest.TestCase):
 			return num_1 - num_2
 
 		input_list = [8, 5, 9, 11]
-		res = p_reduce(input_list, subtractor, 111)
-		self.assertEqual(res, 33)
-
+		res = p_reduce(subtractor, input_list, 78)
+		self.assertEqual(res, 45)
 
 
 
