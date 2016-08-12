@@ -30,7 +30,13 @@ def p_filter(func, lst):
 
 	return return_list
 
-
+# p_any takes a function and a list
+# it iterates through every element in the list
+# and passes it into a function
+# if ANY element returns True
+# the function returns True
+# if no element returns True
+# the function returns False
 def p_any(func, lst):
 
 	for element in lst:
@@ -38,7 +44,9 @@ def p_any(func, lst):
 			return True
 	return False
 
-
+# p_every takes a function and a list
+# it iterates through every element in the list
+# 
 def p_every(func, lst):
 
 	for element in lst:
