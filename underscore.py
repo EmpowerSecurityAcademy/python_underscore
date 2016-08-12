@@ -71,8 +71,11 @@ def p_contains(lst, value):
 
 	return False
 
-
-
+# p_reduce takes a function, a list and a starting value
+# initially the function takes a starting value, and then an element of the list
+# the value returned by the function is then passed back into the function, as well as the next value in the list
+# until there are no values left in the list
+# the last value returned by the function is returned by p_reduce
 def p_reduce(func, lst, start_value):
 
 	for element in lst:
