@@ -14,7 +14,12 @@ def p_map(func, lst):
 
 	return return_list
 
-
+# p_filter taks a function and a list
+# it iterates through every element in the list
+# and passes it into the function
+# if the function returns true
+# the value is stored in a list
+# and returned out of the function
 def p_filter(func, lst):
 
 	return_list = []
