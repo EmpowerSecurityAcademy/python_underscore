@@ -88,7 +88,6 @@ class TestUnderscore(unittest.TestCase):
 		res = p_reduce(summer, input_list, 0)
 		self.assertEqual(res, 33)
 
-
 		def subtractor(num_1, num_2):
 			return num_1 - num_2
 

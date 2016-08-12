@@ -1,5 +1,9 @@
 
-
+# p_map takes a function and a list
+# it iterates through every element in the list
+# and passes it into the function
+# the transformed values are stored in a list
+# and returned out of the function
 def p_map(func, lst):
 
 	return_list = []
@@ -20,7 +24,6 @@ def p_filter(func, lst):
 			return_list.append(element)
 
 	return return_list
-
 
 
 def p_any(func, lst):
