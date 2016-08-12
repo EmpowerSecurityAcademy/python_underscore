@@ -46,7 +46,11 @@ def p_any(func, lst):
 
 # p_every takes a function and a list
 # it iterates through every element in the list
-# 
+# and passes the element into the function
+# if EVERY value returns True
+# the function returns True
+# if ANY value returns False 
+# the function returns False
 def p_every(func, lst):
 
 	for element in lst:
@@ -55,13 +59,18 @@ def p_every(func, lst):
 
 	return True
 
-
+# p_contains takes a list and a value
+# if the value exists in the list
+# the function returns True
+# if the value does not exist in the list
+# the function returns False
 def p_contains(lst, value):
 
 	if value in lst:
 		return True
 
 	return False
+
 
 
 def p_reduce(func, lst, start_value):
